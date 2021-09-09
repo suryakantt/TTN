@@ -1,5 +1,5 @@
 # TTN
-[Link to Google](https://www.google.com)
+
 exercises from bootcamp
 
-linux
+[linux](https://docs.google.com/document/d/10_viKGxIEc_92vb-JlA_ycdCcSvlLiyui9CpSyAmkWw/edit?usp=sharing)
