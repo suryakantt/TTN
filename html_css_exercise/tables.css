@@ -1,0 +1,20 @@
+
+table{
+    border-collapse: collapse;
+    width: 40vw;
+    text-align: center;
+    height: 40vh;
+    box-sizing: content-box;
+    
+}
+.headings{
+    background-color:#f5a6a6;
+
+}
+.tbodie{
+    color: #4559c9;    
+}
+td,th{
+    border: 1px solid #6D8299;
+
+}
