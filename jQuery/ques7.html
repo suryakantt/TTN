@@ -1,0 +1,37 @@
+<!-- Bind a click function to an "click" element and append next "click" next to it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .click{
+      background-color: blueviolet;
+      border: black solid 1px;
+    }
+  </style>
+</head>
+<body>
+    
+      <span class="click">click! </span>
+<script>
+      // $(document).ready(function(){
+      //     $(".click").on('click',function(){
+      //  var copy=$(this).closest(".click").clone(true);  
+      //  $(this).closest(".click").after(copy); 
+      // })})  
+      //sOR
+      $(document).ready(function(){
+               $(".click").click(function(){
+                    var dynamic=$("<span>click! </span>",{class:".click"});
+                    $(this).append(dynamic);
+               })
+
+            })
+    </script>
+</body>
+</html>

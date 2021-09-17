@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Bootcamp session</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <style>
+        .main{
+            height:20px;
+        }
+        .child{
+            color: aliceblue;
+        }
+    </style>
+    </head>
+    <body>
+<button id="btn">
+    clickme!
+</button>
+<p id="para">hi</p>
+        <script>
+            $("#btn").click(function(){
+                var val = $("#para").text();
+                if (val=='hi'){
+                    $("#para").text()='hello'
+                }
+                else{
+                    $("#para").val()='hi'
+                    
+                }
+                
+            })
+
+
+                //   $(document).ready(function(){ 
+                //       $("div.main.div.odd").css("background-color","green");
+                
+                // $("div.main.div.even").css("background-color","brown");
+
+                
+            // $.ajax({
+            //    type:"GET",
+            //    dataType: "json",
+            //    url:"https://jsonplaceholder.typicode.com/todos",
+               
+            //    success:function(data)
+            //    {
+            //        alert('Get Success');
+            //        console.log(data);
+            //    }
+            // });
+            // $.ajax({
+            //     type:"POST",
+            //     url:"https://jsonplaceholder.typicode.com/todos",
+            //     data:{
+            //         completed: false,
+            //         id: 102,
+            //         title: "sed ab consequatur",
+            //         userId: 6
+            //     },
+            //     success:function(data)
+            //    {
+            //        alert('Get Success');
+            //        console.log(data);
+            //    }
+
+            // })
+            // })  
+               
+        </script>
+    </body>
+</html>

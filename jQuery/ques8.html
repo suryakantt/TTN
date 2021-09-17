@@ -1,0 +1,41 @@
+<!-- Click event not working on element which added dynamicly or via script,
+     make it work using .on method -->
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       <style>
+         .static{
+           background-color: blueviolet;
+           border: black solid 1px;
+         }
+         #dynamic{
+             background-color: blanchedalmond;
+             border: black solid 1px;
+             
+         }
+       </style>
+     </head>
+     <body>
+         
+           <span class="static">static</span>
+     <script>
+           $(document).ready(function(){
+               
+                    var dynamic=$("<p id='dynamic'>i came here dynamically</p>",);
+                    $(".static").append(dynamic);
+                   
+                
+                })
+            $(document).on('click','#dynamic',function(){
+                    $(this).css("background-color"," blueviolet")
+                   
+            })
+         </script>
+     </body>
+     </html>

@@ -1,0 +1,30 @@
+<!-- On clicking on "google" tag. It is taking us to google home page. Stop it from happening. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    .load{
+      background-color: aqua;
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+      <a href="https://www.google.com/">Google</a>
+<script>
+          $(document).ready(function(){
+              $("a").on('click',function(link){
+                  link.preventDefault();
+                  alert("cant redirect");
+              })
+          })
+    </script>
+</body>
+</html>
