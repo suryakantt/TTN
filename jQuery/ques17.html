@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Document</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body {
+	font-family: sans-serif;
+padding-left: 40px;
+padding-top: 25px;}        
+#carousel {
+	width: 400px;
+	position: relative;
+}
+
+#carousel img {
+	width: 90vw;
+    height: 90vh;
+	position: absolute;
+    
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#carousel img.active {
+	opacity: 1;
+}
+
+    </style></head>
+	<body>
+		<div id="carousel">
+			<img
+				src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+				class="active"
+			/>
+			<img
+				src="https://images.unsplash.com/photo-1631746363756-c4ad7e5bddb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
+			/>
+			<img
+				src="https://images.unsplash.com/photo-1627908113750-d55936bb2fbc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+			/>
+		</div>
+        <script>
+            $(document).ready(function () {
+	function carousel() {
+		const current = $('#carousel img.active');
+		if (current.length === 0) {
+			$('#carousel img:first-child').addClass('active');
+		} else {
+			const next = $(current).removeClass('active').next();
+			if (next.length === 0) {
+				$('#carousel img:first-child').addClass('active');
+			} else {
+				$(next).addClass('active');
+			}
+		}
+	}
+	setInterval(carousel, 1000);
+});
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Document</title><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <style>
+         
+
+li {
+	margin-bottom: 0.5rem;
+    border: black 1px solid;
+    padding: 00.1rem;
+
+}
+.remove {
+	display: inline-block;
+	color: blueviolet;
+	padding: 0.1rem;
+	border: 2px solid black;
+	cursor: pointer;
+}
+
+        </style>
+	</head>
+	<body>
+		<div id="items"></div>
+
+
+
+        <script>
+            
+            
+            $(document).ready(function () {
+                $.ajax({
+                    url: 'https://fakestoreapi.com/products?limit=7',
+                    async: false,
+                    success: function (data) {
+                        $(data).each((i, value) => {
+                            $('#items').append(
+                                `<li>${value.title} <span class="remove" data-product-id=${value.id}>X</span></li>`
+                            );
+                        });
+                        $(document).on('click', '.remove', function (e) {
+                            $.ajax({
+                                url: `https://fakestoreapi.com/products/${$(e.target).attr(
+                                    'data-product-id'
+                                )}`,
+                                async:false,
+                                method: 'DELETE',
+                                success: function () {
+                                    $(e.target).parent().remove();
+                                },
+                            });
+                        });
+                    },
+                });
+            });</script>
+    </body>
+
+
+  
+</html>

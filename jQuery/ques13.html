@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+</head>
+<body>
+      <div >
+        loaded!
+      </div>
+      <p>jj
+          jj
+      </p>
+      <div>
+          sds
+          ds
+          d
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem molestiae accusantium numquam tempore, nulla aperiam assumenda quibusdam neque eaque harum necessitatibus dolorem possimus culpa placeat ipsam a incidunt, provident asperiores?
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae culpa aliquid corrupti aut temporibus nesciunt, at magnam inventore in similique tempora tempore nihil. Dolorem, et iste animi sit incidunt ipsam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita cumque reiciendis quod fugit, atque repudiandae officiis dolor tenetur vitae minus porro adipisci enim neque dignissi
+          mos sapiente aspernatur corporis alias magni?r
+      </p>
+    
+    
+      <p>hh
+          h
+          jj
+      </p>
+      
+
+</body>
+<script>
+    $(document).ready(function(){
+     $('body').children().each(function(indx,value){
+          var ele=value.tagName;
+          var h= value.clientHeight;
+          console.log('heightof '+ele+' is:'+h+'px');
+     }   )
+    })
+  </script>
+</html>
