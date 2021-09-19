@@ -1,73 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./formstyle.css">
-</head>
-<body>
-    <header>
-        <h1>
-            To the New
-        </h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#help">Quick Help</a>
-        </nav>
-    </header>
-    <div>
-        <form action="">
-            <div>
-                <h2>
-                    Bug Report
-                </h2>
-            </div>
-            <div>
-                <label for="">Title:</label>
-                <input type="text" id="title" name="title" required>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ques 12</title>
+		<link rel="stylesheet" href="./formstyle.css" />
+	</head>
+	<body>
+		<!-- Header -->
+		<header id="header">
+			<h1 class="heading">TO THE NEW</h1>
 
-                <label for="">Description:</label>
-                <input type="text" id="desc" name="desc">
-                
-                <label for="os">Operating system</label>
-                <select name="os" id="os">
-                    <option value="Windows "></option>
-                    <option value="linux"></option>
-                    <option value="macOS"></option>
-                </select>
+			<!-- Navbar -->
+			<nav class="nav">
+				<a href="#home" class="nav-link nav-text" rel="noopener noreferrer"
+					>Home</a
+				>
 
-                <label for="product">Product
-                </label>
-                <select name="product" id="product">
-                    <option value="manjaro">manjaro </option></option>
-                    <option value="ubuntu">ubuntu </option>
-                    <option value="dsdsd">dsdsd </option>
-                </select>
-                
-                <label for="version">Version
-                </label>
-                <input type="text" id="version" name="version">
+				<a href="#help" class="nav-link nav-text" rel="noopener noreferrer"
+					>Quick Help</a
+				>
+			</nav>
+		</header>
 
-                <label for="">License
-                </label>
-                <input type="radio" name="" id="">
-                <span>Free</span>
+		<hr class="divider" />
 
-                <input type="radio" name="" id="">
-                <span>Business</span>
+		<!-- Main Section -->
+		<main id="#main">
+			<!-- Form Container -->
+			<div class="form-container">
+				<h3 class="heading">Bug Report</h3>
 
-                <label for="">   </label>
-                <select name="" id=""></select>
-                
-                <label for="">
-                </label>
-                <input type="file" name="" id="">
-                
+				<!-- Form -->
+				<form class="form">
+					<div class="field-container">
+						<label for="title">Title:*</label>
+						<input type="text" id="title" name="title" required />
+					</div>
 
-            </div>
-        </form>
-    </div>
-</body>
+					<div class="field-container">
+						<label for="description">Description:*</label>
+						<textarea name="description" id="description" required></textarea>
+					</div>
+
+					<div class="field-container">
+						<label for="operating-system">Operating System:</label>
+						<select name="operating system" id="operating-system">
+							<option value="Windows XP">Windows XP</option>
+							<option value="Ubuntu">Ubuntu</option>
+							<option value="MacOS">MacOS</option>
+						</select>
+					</div>
+
+					<div class="field-container">
+						<label for="product">Product:*</label>
+						<select name="product" id="product">
+							<option value="Formoid">Formoid</option>
+							<option value="Xyz">Xyz</option>
+							<option value="abc">abc</option>
+						</select>
+					</div>
+
+					<div class="field-container">
+						<label for="version">Version:*</label>
+						<input type="text" id="version" name="version" required />
+					</div>
+
+					<div class="radio-group">
+						<p class="radio-group-heading">License:*</p>
+
+						<div class="group-row">
+							<div class="field-container">
+								<label for="license-free">Free</label>
+								<input
+									type="radio"
+									name="license"
+									value="Free"
+									id="license-free"
+									required
+								/>
+							</div>
+
+							<div class="field-container">
+								<label for="license-business">Business</label>
+								<input
+									type="radio"
+									name="license"
+									value="Business"
+									id="license-Business"
+									required
+								/>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-container">
+						<label for="severity">Severity:</label>
+						<select name="severity" id="severity">
+							<option value="Formoid">Critical</option>
+							<option value="Xyz">Moderate</option>
+							<option value="abc">Low</option>
+						</select>
+					</div>
+
+					<div class="field-container">
+						<label for="attachments">Attachments</label>
+						<input type="file" id="attachments" name="attachments" />
+					</div>
+
+					<!-- Submit Button -->
+					<div class="footer">
+						<input type="submit" class="submit-btn" value="Send" />
+					</div>
+				</form>
+			</div>
+		</main>
+	</body>
 </html>
